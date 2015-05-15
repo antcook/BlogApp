@@ -1,0 +1,41 @@
+<div class="admin-page">
+<div class="container">
+
+    <h2 class="admin-heading">Edit: <strong>{{post.title}}</strong></h2>
+
+<form class="main" action="" method="post" autocomplete="off">
+
+
+    {{#if message}}
+        <div class="success">{{{message}}}</div>
+    {{/if}}
+
+    <label for="title">Title</label>
+    <input class="title" type="text" name="title" value="{{post.title}}">
+
+    <label for="url">URL</label>
+    <input class="url" type="text" name="url" value="{{post.url}}">
+
+    <label for="Author">Author</label>
+    <input type="text" name="author" value="{{post.author}}">
+
+    <textarea type="text" name="content">{{post.content}}</textarea>
+
+    <input type="submit" class="submit" value="Update Post">
+
+    <a href="/{{post.url}}/delete" class="delete">Delete Post</a>
+  
+</form>
+
+</div></div>
+
+<script type="text/javascript" src="/scripts/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    menubar : false,
+    theme: "modern",
+    skin: 'light',
+    statusbar: false
+ });
+</script>

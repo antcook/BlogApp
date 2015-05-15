@@ -1,0 +1,35 @@
+<div class="admin-page">
+
+    <div class="container">
+
+        <h2 class="admin-heading">Manage Posts</h2>
+
+        <a href="/admin/add"  class="delete admin-edit right">Write A New Post</a>
+
+        {{#each posts}}
+
+        <div class="admin-post">
+
+            <div class="admin-info">
+                
+                <h3 class="title"><a href="/{{url}}">{{title}}</a></h3>
+
+                <span class="details">
+                    Posted by <a href="/author/{{authorUrl}}">{{author}}</a> 
+                    on <a href="/archive/{{dateLink date}}">{{dateFormat date}}</a>
+                </span>
+
+            </div>
+
+            <div class="admin-buttons">
+                <a href="/{{url}}/edit"  class="delete admin-edit">Edit Post</a>
+                <a href="/{{url}}/delete" class="delete">Delete Post</a>
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</div>

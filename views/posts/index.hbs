@@ -1,0 +1,29 @@
+<header class="header">
+
+<h1>{{blog.title}}</h1>
+<p>{{blog.description}}</p>
+
+</header>
+
+<div class="page">
+
+    {{#each posts}}
+
+        <div class="post">
+
+        <h2 class="title"><a href="/{{url}}">{{title}}</a></h2>
+
+        <span class="details">
+            Posted by <a href="/author/{{authorUrl}}">{{author}}</a> 
+            on <a href="/archive/{{dateLink date}}">{{dateFormat date}}</a>
+        </span>
+
+        <div class="content">{{short content}}</div>
+    
+        <a href="/{{url}}" class="more">Read More</a>
+
+    </div>
+
+    {{/each}}
+
+</div>

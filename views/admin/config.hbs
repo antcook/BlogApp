@@ -1,0 +1,26 @@
+<div class="admin-page">
+
+    <div class="container">
+
+   <h2 class="admin-heading">Settings</h2>
+
+<form class="main" action="" method="post" autocomplete="off">
+
+
+    {{#if message}}
+        <div class="success">{{{message}}}</div>
+    {{/if}}
+
+    <label for="title">Blog Name</label>
+    <input type="text" name="title" value="{{blog.title}}">
+
+    <label for="url">Blog Description</label>
+    <input type="text" name="description" value="{{blog.description}}">
+
+    <input type="submit" class="submit" value="Update Settings">
+  
+</form>
+
+    </div>
+
+</div>

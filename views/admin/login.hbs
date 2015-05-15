@@ -1,0 +1,17 @@
+
+
+<form class="login" action="" method="post" autocomplete="off">
+
+	<h1>Login</h1>
+
+	{{#if message}}
+        <div class="error">{{message}}</div>
+    {{/if}}
+
+
+	<input type="text" name="email" placeholder="Email Address">
+	<input type="password" name="password" placeholder="Password">
+
+	<input type="submit" class="submit" value="Login">
+	
+</form>

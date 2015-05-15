@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+
+    <title></title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/styles/normalize.css">
+
+    <link rel="stylesheet" href="/styles/admin.css">
+    <link rel="stylesheet" href="/styles/app.css">
+
+</head>
+<body>
+
+    {{#if user}}
+
+        <div class="admin">
+
+            <h4><a href="/">{{blog.title}}</h4>
+
+            <ul class="menu">
+                <li><a href="/admin/">Manage Posts</a></li>
+                <li><a href="/admin/users">Manage Users</a></li>
+                <li><a href="/admin/settings">Settings</a></li>
+                <li class="logout">Hello, {{ user.firstName }} | <a href="/admin/logout">Logout</a></li>
+            </ul>
+
+        </div>
+
+    {{/if}}
+
+	{{{body}}}
+
+</body>
+</html>

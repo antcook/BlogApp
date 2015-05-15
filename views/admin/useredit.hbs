@@ -1,0 +1,35 @@
+<div class="admin-page">
+
+    <div class="container">
+
+ <h2 class="admin-heading">Update {{userinfo.firstName}} {{userinfo.lastName}}</h2>
+
+<form class="main" action="" method="post" autocomplete="off">
+
+
+    {{#if message}}
+        <div class="success">{{{message}}}</div>
+    {{/if}}
+
+    <label for="title">First Name</label>
+    <input class="title" type="text" name="firstName" value="{{userinfo.firstName}}">
+
+    <label for="title">Last Name</label>
+    <input class="title" type="text" name="lastName" value="{{userinfo.lastName}}">
+
+    <label for="title">Email Address</label>
+    <input class="title" type="text" name="email" value="{{userinfo.email}}">
+
+    <label for="title">Password</label>
+    <input class="title" type="password" name="password" value="">
+
+
+
+
+    <input type="submit" class="submit" value="Create Post">
+  
+</form>
+
+    </div>
+
+</div>
